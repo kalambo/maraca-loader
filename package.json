@@ -1,0 +1,25 @@
+{
+  "name": "maraca-loader",
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "scripts": {
+    "prettier": "prettier --write \"src/**/*.ts\"",
+    "build": "rimraf lib/* && tsc",
+    "prepare": "yarn run build"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
+  "dependencies": {
+    "fs-extra": "^7.0.1"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^5.0.4",
+    "@types/node": "^10.12.5",
+    "prettier": "^1.14.3",
+    "rimraf": "^2.6.2",
+    "typescript": "^3.1.3"
+  }
+}
