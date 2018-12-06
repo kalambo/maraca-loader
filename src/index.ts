@@ -32,10 +32,9 @@ export default async function() {
       }),
       {},
     );
-    const result = { modules, index: index.slice(0, -3) };
     cb(
       null,
-      `export default ${JSON.stringify(result)}`.replace(
+      `export default ${JSON.stringify(modules)}`.replace(
         /xxxREQUIRExxx[0-9\.]+xxx/g,
         id => {
           const path = dependencies[id];
