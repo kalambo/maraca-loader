@@ -21,11 +21,12 @@ export default async function() {
       (res, file, i) => ({
         ...res,
         [fileNames[i].slice(0, -3)]: file.replace(
-          /"([^"]*\.(png|svg|jpg|gif))"/g,
+          /image:\s*"([^"]+)"/g,
           (_, image) => {
+            if (image.startsWith('http')) return `image: "${image}"`;
             const id = requireId();
             dependencies[id] = image;
-            return `"${id}"`;
+            return `image: "${id}"`;
           },
         ),
       }),
