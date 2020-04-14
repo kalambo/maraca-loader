@@ -1,6 +1,6 @@
 {
   "name": "maraca-loader",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "license": "MIT",
   "main": "lib/index.js",
   "scripts": {
@@ -16,8 +16,8 @@
     "maraca": "*"
   },
   "devDependencies": {
-    "prettier": "^1.18.2",
-    "rimraf": "^3.0.0",
-    "typescript": "^3.7.2"
+    "prettier": "^2.0.4",
+    "rimraf": "^3.0.2",
+    "typescript": "^3.8.3"
   }
 }
